@@ -1,46 +1,61 @@
 import java.util.Scanner; 
 
 public class Instruction {
-    
-    private String wordOne; 
-    private String wordTwo; 
-    private String wordThree; 
-    
-    private String object; 
-    
-    Scanner  textScanner = new Scanner(object); 
 
-    public Instruction(String object) {
-        this.object = object;  
-       
+    private String command; 
+    private String argumentOne; 
+    private String argumentTwo; 
+
+
+    public Instruction(String userInput) {
+        Scanner textScanner = new Scanner(userInput); 
+
+        this.command = tokenOne(textScanner).toUpperCase(); 
+        this.argumentOne = tokenTwo(textScanner).replaceAll("\\s+", " ");
+        this.argumentTwo = tokenThree(textScanner).replaceAll("\\s+", " ");
     }
 
-    private String tokenOne() {
-        String wordOne = textScanner.next();
-        tokenOne = ; 
-        
-        
-        
-        
+    private String tokenOne(Scanner textScanner) {
+        if (textScanner.hasNext()) {
+            return textScanner.next(); 
+        } else {
+            return ""; 
+        }
     }
-   
     
+    private String tokenTwo(Scanner textScanner) {
+        if (textScanner.hasNext()) {
+            return textScanner.next().substring(0); 
+        } else {
+           
+           
+            return ""; 
+        }
+
+    }
     
+    private String tokenThree(Scanner textScanner) {
+        if (textScanner.hasNext()) { 
+            return textScanner.nextLine().trim(); 
+        } else {
+            return ""; 
+        }
+
+    }
     
     public String command() {
-        
-        return command();
+
+        return command;
     }
 
-
     public String argumentOne() {
-       
-        return null;
+
+        return argumentOne;
     }
 
 
     public String argumentTwo() {
-        
-        return null;
+
+        return argumentTwo;
     }
 }

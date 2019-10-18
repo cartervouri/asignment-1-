@@ -54,6 +54,7 @@ public class Browzbot {
 
     
     /**
+     * 
      * TODO: create a public Browzbot method "run"
      * 
      * signature: run(Instruction)
@@ -78,6 +79,13 @@ public class Browzbot {
      * 
      */
     // your run goes here
+    public Result run(Instruction instruction) {
+        if(instruction.command().equals("")) {
+            return new Result(1,"empty Instuction");
+          
+        }
+        if(instruction.command())
+    }
 
     
     
@@ -111,7 +119,9 @@ public class Browzbot {
 
 
     
-    
+    private boolean isKnownCommand(String command) {
+        if
+    }
     // --------------------------------------------------------------------------    
     //
     // The following helper methods are all complete, so don't change 'em!
@@ -257,5 +267,7 @@ public class Browzbot {
     private void quit() {
         driver.quit();
     }
+
+    
 
 }

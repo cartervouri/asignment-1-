@@ -1,7 +1,8 @@
-import java.io.InputStream;
+    import java.io.InputStream;
 import java.io.PrintStream;
 import java.util.Scanner;
-
+    
+   
 /**
  * This class is used to get input from the user and to provide
  * output.
@@ -18,7 +19,9 @@ public class UserInterface {
 
     private final PrintStream outputStream;
     private final Scanner scanner;
-
+    
+    
+    
     public UserInterface() {
         this(System.in, System.out);
     }
@@ -48,9 +51,10 @@ public class UserInterface {
         outputStream.print(s);
     }
 
-    public String stringFromUser(String prompt) {
-        // TODO Auto-generated method stub
-        return null;
+    public String stringFromUser(String givenprompt) {
+        
+        return msg.trim;
+ 
     }
 
     
